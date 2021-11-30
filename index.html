@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Attrition Prediction</title>
+</head>
+<body>
+
+    <form action="{{ url_for('predict')}}" method="post">
+        <h1>Employee  Attrition Prediction</h1>
+
+        <input type="text" name="Age"                      placeholder="age of the employee"> <br>
+        <input type="text" name="DailyRate"                placeholder="Daily rate in dollars"> <br>
+        <input type="text" name="DistanceFromHome"         placeholder="Home to office distance in kms"> <br>
+        <input type="text" name="EducationField"           placeholder="Education Field Life Sciences:0,Medical:1,Marketing:2,Technical Degree:3,Other:4,Human Resources:5"> <br>
+        <input type="text" name="EnvironmentSatisfaction"  placeholder="Environment Satisfaction rating 1 to 4"> <br>
+        <input type="text" name="HourlyRate"               placeholder="Hourly rate of employee in dollars"> <br>
+        <input type="text" name="JobRole"                  placeholder="Job role, if Sales Executive : 0 ,Research Scientist : 1 ,Laboratory Technician : 2 ,Manufacturing Director : 3 ,Healthcare Representative : 4 ,Manager : 5,Sales Representative:6, Research Director:7,Human Resources:8"> <br>
+        <input type="text" name="JobSatisfaction"          placeholder="Job satisfaction rating from 1 to 4, 4 being highest"> <br>
+        <input type="text" name="MonthlyIncome"            placeholder="Monthly income of the employee in dollars"> <br>
+        <input type="text" name="MonthlyRate"              placeholder="Monthly rate the employee in dollars"> <br>
+        <input type="text" name="NumCompaniesWorked"       placeholder="Total number of companies that the employee has worked so far"> <br>
+        <input type="text" name="OverTime"                 placeholder="Over time done by employee if yes :1, if no :0"> <br>
+        <input type="text" name="PercentSalaryHike"        placeholder="Last Salary hike received in percentage "> <br>
+        <input type="text" name="StockOptionLevel"         placeholder="Stock option lelel between 1 to 4"> <br>
+        <input type="text" name="TotalWorkingYears"        placeholder="Total work experience of the employee in years"> <br>
+        <input type="text" name="TrainingTimesLastYear"    placeholder="How many times the employee did train  since last year"> <br>
+        <input type="text" name="YearsAtCompany"           placeholder="Total experience of the employee in the current company in years"> <br>
+        <input type="text" name="YearsInCurrentRole"       placeholder="Total experience of the employee in current role in years"> <br>
+        <input type="text" name="YearsSinceLastPromotion"  placeholder="total time in years since the last promotion of the employee"> <br>
+        <input type="text" name="YearsWithCurrManager"     placeholder="Total time spent by the employee with the current manager"> <br>
+        <input type="submit"><br>
+
+        {{ predict_Attrition }}
+
+
+    </form>
+
+</body>
+</html>
